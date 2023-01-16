@@ -49,11 +49,11 @@ function iterate(id){
     var result = document.getElementsByClassName("result");
     result[0].innerText = "";
 
-    //asks the question
+    //gets and asks the question
     const question = document.getElementById("question");
     question.innerText = question[id].q;
 
-    //displays the options
+    //gets and displays the options
     const op1 = document.getElementById("op1");
     const op2 = document.getElementById('op2');
     const op3 = document.getElementById("op3");
@@ -71,5 +71,33 @@ function iterate(id){
     op4.value = Questions[id].a[3].isCorrect;
 
     var selected = "";
-    
+
+    //selection for op1
+    op1.addEventListener("click", ()=> {
+        op1.style.backgroundColor = " rgb(165, 109, 218)";
+        op2.style.backgroundColor = "blueviolet";
+        op3.style.backgroundColor = "blueviolet";
+        op4.style.backgroundColor = "blueviolet";
+        selected = op1.value;
+    })
+
+    //selection for op2
+    op2.addEventListener("click", ()=> {
+        op1.style.backgroundColor = "blueviolet";
+        op2.style.backgroundColor = "rgb(165, 109, 218)";
+        op3.style.backgroundColor = "blueviolet";
+        op4.style.backgroundColor = "blueviolet";
+        selected = op2.value;
+    })
+
+    //selection for op3
+    op3.addEventListener("click", ()=> {
+        op1.style.backgroundColor = "blueviolet";
+        op2.style.backgroundColor = "blueviolet";
+        op3.style.backgroundColor = "rgb(165, 109, 218)";
+        op4.style.backgroundColor = "blueviolet";
+        selected = op3.value;
+})
+
+
 }
