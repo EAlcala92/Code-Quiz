@@ -1,5 +1,5 @@
 .panel{
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -14,13 +14,16 @@
 
 .option-container{
     padding: 10px;
+    margin-left: 40%;
     width: 15vw;
     height: 10vh;
     border-radius: 25%;
+    text-align:center;
 }
 
 .option{
     background-color: blueviolet;
+    
 }
 
 .option:hover{
