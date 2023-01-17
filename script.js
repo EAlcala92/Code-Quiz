@@ -1,3 +1,27 @@
+var timerElement = document.querySelector(".timer-count");
+var startBtn = document.querySelector(".start-button");
+
+function startQuiz(){
+    timerCount = 75;
+    startTimer();
+}
+
+//starts the timer
+function startTimer(){
+    timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        if(timerCount >= 0){
+            clearInterval(timer);
+            finishedQuiz();
+        }
+
+        if(timerCount === 0){
+            clearIntervals(timer);
+            finishedQuiz();
+        }
+    }, 7500);
+}
 //Q&A
 const Questions = [{
     id: 0,
@@ -40,8 +64,7 @@ const Questions = [{
         {text: "console log", isCorrect: true}]
 }]
 
-//start quiz
-var start = true;
+
 
 //run through question
 function iterate(id){
@@ -107,6 +130,5 @@ function iterate(id){
         op4.style.backgroundColor = "rgb(165, 109, 218)";
         selected = op4.value;
 })
-
-    
 }
+    
