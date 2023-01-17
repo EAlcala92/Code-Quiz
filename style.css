@@ -16,8 +16,11 @@
     padding: 10px;
     width: 15vw;
     height: 10vh;
-    background-color: blueviolet;
     border-radius: 25%;
+}
+
+.option{
+    background-color: blueviolet;
 }
 
 .option:hover{

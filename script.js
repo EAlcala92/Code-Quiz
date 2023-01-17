@@ -99,5 +99,14 @@ function iterate(id){
         selected = op3.value;
 })
 
+    //selection for op4
+    op4.addEventListener("click", ()=> {
+        op1.style.backgroundColor = "blueviolet";
+        op2.style.backgroundColor = "blueviolet";
+        op3.style.backgroundColor = "blueviolet";
+        op4.style.backgroundColor = "rgb(165, 109, 218)";
+        selected = op4.value;
+})
 
+    
 }
