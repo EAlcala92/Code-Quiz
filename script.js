@@ -131,4 +131,4 @@ function iterate(id){
         selected = op4.value;
 })
 }
-    
+startBtn.addEventListener("click", startQuiz);
