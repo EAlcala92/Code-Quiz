@@ -3,6 +3,12 @@
     justify-content: center;
     align-items: center;
 }
+.head{
+    text-align: end;
+}
+.timer-count{
+  flex-direction: row;
+}
 
 .question-container{
     margin: 10px;
