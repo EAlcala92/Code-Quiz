@@ -7,17 +7,25 @@
     </head>
 
     <body>
-        <nav>
-            <div class ="head">
-                <div class="timer-count"><h4>Time: </h6>75</div>
-                <link><a id="highscores" href ="Highscores">Highscores</a></link>
+        <div class ="panel col-lg-8 p-4">
+            <div class = "row pb-4">
+                <div class="col-lg-4"><h2 class="quiz-title">Code Quiz</h2></div>
+                <hr>
+                <div class="col-lg-4">
+                    <h4 class="float-right text-primary d-none" id="timer-count"> "Timer :"
+                    <span id = "timer">75</span>
+                     </h4>
+                </div>
             </div>
-        </nav>
+        </div>
 
-        <main>
-            <div class="panel">
+        <div class="quiz-questions d-none" id="quiz-questions">
+            <h2 class="text-info text-center" id="title-item"> Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+            <div class="answers mt-5 mb-5" id="Q-A"></div>
+            <h1 id="alert"></h1>
+        </div>
             <button class="start-button">Start</button>
-            </div>
+           
 
             <div class="question-container" id = "Question">Question goes here</div>
             <div class="option-container">
@@ -27,7 +35,6 @@
                 <button class="option" onclick="">answer4</button>
             </div>
             <div class = "result"></div>
-        </main>
         <script src="script.js"></script>
     </body>
 </html>

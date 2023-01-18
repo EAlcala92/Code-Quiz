@@ -2,6 +2,7 @@ var timerElement = document.querySelector(".timer-count");
 var startBtn = document.querySelector(".start-button");
 
 function startQuiz(){
+    iterate();
     timerCount = 75;
     startTimer();
 }
@@ -71,10 +72,12 @@ function iterate(id){
     //diplay results
     var result = document.getElementsByClassName("result");
     result[0].innerText = "";
+    console.log(result);
 
     //gets and asks the question
     const question = document.getElementById("question");
     question.innerText = question[id].q;
+    console.log(question);
 
     //gets and displays the options
     const op1 = document.getElementById("op1");
@@ -102,6 +105,7 @@ function iterate(id){
         op3.style.backgroundColor = "blueviolet";
         op4.style.backgroundColor = "blueviolet";
         selected = op1.value;
+        console.log(selected)
     })
 
     //selection for op2
@@ -111,6 +115,7 @@ function iterate(id){
         op3.style.backgroundColor = "blueviolet";
         op4.style.backgroundColor = "blueviolet";
         selected = op2.value;
+        console.log(selected)
     })
 
     //selection for op3
@@ -120,6 +125,7 @@ function iterate(id){
         op3.style.backgroundColor = "rgb(165, 109, 218)";
         op4.style.backgroundColor = "blueviolet";
         selected = op3.value;
+        console.log(selected);
 })
 
     //selection for op4
@@ -129,6 +135,7 @@ function iterate(id){
         op3.style.backgroundColor = "blueviolet";
         op4.style.backgroundColor = "rgb(165, 109, 218)";
         selected = op4.value;
+        console.log(selected)
 })
 }
 startBtn.addEventListener("click", startQuiz);
